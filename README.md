@@ -1,5 +1,5 @@
 [![npm version](https://img.shields.io/npm/v/@nomadreservations/ngx-gallery.svg)](https://www.npmjs.com/package/@nomadreservations/ngx-gallery)
-[![Downloads](https://img.shields.io/npm/dm/ngx-gallery.svg)](https://www.npmjs.com/package/@nomadreservations/ngx-gallery)
+[![Downloads](https://img.shields.io/npm/dm/@nomadreservations/ngx-gallery.svg)](https://www.npmjs.com/package/@nomadreservations/ngx-gallery)
 [![licence](https://img.shields.io/npm/l/@nomadreservations/ngx-gallery.svg)](https://www.npmjs.com/package/@nomadreservations/ngx-gallery)
 [![Build Status](https://travis-ci.org/nomadreservations/ngx-gallery.svg?branch=master)](https://travis-ci.org/nomadreservatoins/ngx-gallery)
 [![Coverage Status](https://coveralls.io/repos/github/nomadreservations/ngx-gallery/badge.svg?branch=master)](https://coveralls.io/github/nomadreservations/ngx-gallery?branch=master)
