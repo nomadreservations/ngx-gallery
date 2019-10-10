@@ -44,7 +44,6 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "lorem-ipsum": "^2.0.3",
     "ng-packagr": "^5.4.0",
-    "ng2-page-scroll": "^4.0.0-beta.12",
     "ngx-lorem-ipsum": "^0.1.1",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",

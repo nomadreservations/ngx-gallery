@@ -5521,11 +5521,6 @@ ng-packagr@^5.4.0:
     terser "^4.1.2"
     update-notifier "^3.0.0"
 
-ng2-page-scroll@^4.0.0-beta.12:
-  version "4.0.0-beta.12"
-  resolved "https://registry.npmjs.org/ng2-page-scroll/-/ng2-page-scroll-4.0.0-beta.12.tgz#26b4e71ef9ad0859f1fa4e5e8d6ce7c75b73c6f7"
-  integrity sha1-JrTnHvmtCFnx+k5ejWznx1tzxvc=
-
 ngx-lorem-ipsum@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npmjs.org/ngx-lorem-ipsum/-/ngx-lorem-ipsum-0.1.1.tgz#9ef39f328c0e9edb180b4089eb179481d7ab6cfd"
