@@ -29,10 +29,6 @@ jobs:
         - yarn coveralls
     - stage: release
       deploy:
-        provider: script
-        skip_cleanup: true
-        script: npx semantic-release
-      deploy:
         provider: pages
         skip_cleanup: true
         github_token: $GITHUB_TOKEN
