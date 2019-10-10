@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "lint:lib": "ng lint gallery",
     "e2e": "ng e2e",
-    "coveralls": "coveralls < coverage/ngx-gallery/lcov.info",
+    "coveralls": "coveralls < coverage/gallery/lcov.info",
     "commit": "git-cz",
     "semantic-release": "semantic-release"
   },

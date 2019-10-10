@@ -143,6 +143,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverage": true,
             "main": "projects/gallery/src/test.ts",
             "tsConfig": "projects/gallery/tsconfig.spec.json",
             "karmaConfig": "projects/gallery/karma.conf.js"
