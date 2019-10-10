@@ -8,6 +8,6 @@
   "hooks": {
     "before:init": "git clone git@github.com:nomadreservations/ngx-gallery -b gh-pages --depth 1 .stage",
     "before:release": ["ng build --prod --base-href ngx-gallery", "ng build gallery"],
-    "after:release": "cd .stage && git rm * && cp -r ../dist/app/* . && git add . --all && git commit -m 'Updated pages for version ${version}' --no-verify && git push && cd - && rm -rf .stage"
+    "after:release": "cd .stage && git rm -r * && cp -r ../dist/app/* . && git add . --all && git commit -m 'Updated pages for version ${version}' --no-verify && git push && cd - && rm -rf .stage"
   }
 }
