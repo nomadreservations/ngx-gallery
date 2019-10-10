@@ -14,7 +14,7 @@ _This utilizes ng-packagr greater than 5.5.1 to ensure an ivy (@angular 9+ ivy) 
 
 
 # Demo
-TBD
+[Demo Site](https://nomadreservations.github.io/ngx-gallery/)
 
 # Prerequisites
 - [Font Awesome](http://fontawesome.io/) (required for icons)
@@ -55,7 +55,7 @@ Angular Material is using `transform: translate3d(0,0,0);` in components styles.
 You can read more about this issue [here](https://github.com/angular/material2/issues/998)
 
 # Installation
-```npm install ngx-gallery --save```
+```npm install @nomadreservations/ngx-gallery --save```
 
 # NgxGalleryOptions
 
