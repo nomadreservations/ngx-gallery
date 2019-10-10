@@ -275,27 +275,27 @@ export class AppComponent implements OnInit {
 # Styling
 - Active thumbnail
 ```
-/deep/ .ngx-gallery-thumbnail.ngx-gallery-active {  
+::ng-deep .ngx-gallery-thumbnail.ngx-gallery-active {  
     /* your styles */
 }
 ```
 
 - Arrow
 ```
-ngx-gallery /deep/ .ngx-gallery-arrow {
+ngx-gallery ::ng-deep .ngx-gallery-arrow {
     /* your styles */
 }
 ```
 
 - Arrow in particular element
 ```
-ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow {
+ngx-gallery ::ng-deep ngx-gallery-image .ngx-gallery-arrow {
     /* your styles */
 }
-ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow {
+ngx-gallery ::ng-deep ngx-gallery-thumbnails .ngx-gallery-arrow {
     /* your styles */
 }
-ngx-gallery /deep/ ngx-gallery-preview .ngx-gallery-arrow {
+ngx-gallery ::ng-deep ngx-gallery-preview .ngx-gallery-arrow {
     /* your styles */
 }
 ```
