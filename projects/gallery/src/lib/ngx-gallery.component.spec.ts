@@ -10,7 +10,7 @@ import {
   NgxGalleryOptions,
   NgxGalleryPreviewComponent,
   NgxGalleryThumbnailsComponent
-} from '../public-api';
+} from '../';
 import { NgxGalleryImage } from './ngx-gallery-image.model';
 
 describe('NgxGalleryComponent', () => {
