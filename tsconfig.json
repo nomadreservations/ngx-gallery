@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@nomadreservations/ngx-gallery": [
+        "projects/gallery/src"
+      ],
+      "@nomadreservations/ngx-gallery/*": [
+        "projects/gallery/src/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
