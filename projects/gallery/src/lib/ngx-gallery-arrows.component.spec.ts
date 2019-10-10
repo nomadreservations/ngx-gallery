@@ -30,13 +30,13 @@ describe('NgxGalleryArrowsComponent', () => {
     nextArrowContent = nextArrow.querySelector('.ngx-gallery-icon-content');
   });
 
-  it('should emit event onPrevClick after click on prev arrow', done => {
-    comp.onPrevClick.subscribe(() => done());
+  it('should emit event prevClick after click on prev arrow', done => {
+    comp.prevClick.subscribe(() => done());
     prevArrow.click();
   });
 
-  it('should emit event onNextClick after click on next arrow', done => {
-    comp.onNextClick.subscribe(() => done());
+  it('should emit event nextClick after click on next arrow', done => {
+    comp.nextClick.subscribe(() => done());
     nextArrow.click();
   });
 

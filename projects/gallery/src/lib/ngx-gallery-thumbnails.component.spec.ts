@@ -71,7 +71,7 @@ describe('NgxGalleryThumbnailsComponent', () => {
   });
 
   it('should emit event onActiveChange after click on image', done => {
-    comp.onActiveChange.subscribe(index => {
+    comp.activeChange.subscribe(index => {
       expect(index).toEqual(1);
       done();
     });

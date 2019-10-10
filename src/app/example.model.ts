@@ -10,7 +10,7 @@ export class Example {
     this.images = images;
     this.options = options;
 
-    if (this.options.length == 1) {
+    if (this.options.length === 1) {
       this.options.push({
         breakpoint: 500,
         width: '300px',

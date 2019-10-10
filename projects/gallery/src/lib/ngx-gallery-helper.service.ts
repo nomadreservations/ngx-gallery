@@ -2,14 +2,20 @@ import { ElementRef, HostListener, Injectable, Renderer2 } from '@angular/core';
 
 @Injectable()
 export class NgxGalleryHelperService {
-  private swipeHandlers: Map<string, Function[]> = new Map<string, Function[]>();
+  private swipeHandlers: Map<string, Array<() => void>> = new Map<string, Array<() => void>>();
 
   constructor(private renderer: Renderer2) {}
 
   @HostListener('swipeLeft', ['$event'])
   listenSwipeLeft(event) {}
 
-  manageSwipe(status: boolean, element: ElementRef, id: string, nextHandler: Function, prevHandler: Function): void {
+  manageSwipe(
+    status: boolean,
+    element: ElementRef,
+    id: string,
+    nextHandler: () => void,
+    prevHandler: () => void
+  ): void {
     const handlers = this.getSwipeHandlers(id);
 
     // swipeleft and swiperight are available only if hammerjs is included
@@ -28,6 +34,7 @@ export class NgxGalleryHelperService {
 
   validateUrl(url: string): string {
     if (url.replace) {
+      // tslint:disable-next-line: quotemark
       return url.replace(new RegExp(' ', 'g'), '%20').replace(new RegExp("'", 'g'), '%27');
     } else {
       return url;
@@ -35,10 +42,10 @@ export class NgxGalleryHelperService {
   }
 
   getBackgroundUrl(image: string) {
-    return "url('" + this.validateUrl(image) + "')";
+    return `url('${this.validateUrl(image)}')`;
   }
 
-  private getSwipeHandlers(id: string): Function[] | undefined {
+  private getSwipeHandlers(id: string): Array<() => void> | undefined {
     return this.swipeHandlers.get(id);
   }
 

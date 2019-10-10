@@ -1,6 +1,6 @@
 {
   "name": "ngx-gallery",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,9 +9,13 @@
     "test:lib": "ng test gallery",
     "test:ci": "ng test --watch false --no-progress --browsers ChromeHeadless",
     "lint": "ng lint",
+    "lint:lib": "ng lint gallery",
     "e2e": "ng e2e",
-    "coveralls": "coveralls < coverage/ngx-gallery/lcov.info"
+    "coveralls": "coveralls < coverage/ngx-gallery/lcov.info",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
   },
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.10",
@@ -32,12 +36,16 @@
     "@angular/cli": "~8.3.8",
     "@angular/compiler-cli": "~8.2.10",
     "@angular/language-service": "~8.2.10",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
     "@types/jasmine": "~3.4.3",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "~12.7.12",
     "codelyzer": "^5.1.2",
+    "cz-conventional-changelog": "^3.0.2",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
+    "husky": "^3.0.8",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.3.0",
@@ -49,9 +57,30 @@
     "ng-packagr": "^5.6.1",
     "ngx-lorem-ipsum": "^0.1.1",
     "protractor": "~5.4.2",
+    "semantic-release": "^15.13.24",
     "ts-node": "~8.4.1",
     "tsickle": "^0.37.0",
     "tslint": "~5.20.0",
     "typescript": "~3.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nomadreservations/ngx-gallery.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run lint:lib",
+      "commit-msg": "commitlint --edit"
+    }
   }
 }

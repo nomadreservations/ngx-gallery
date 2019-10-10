@@ -155,9 +155,9 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   @Input() downloadIcon: string;
   @Input() bullets: string;
 
-  @Output() onOpen = new EventEmitter();
-  @Output() onClose = new EventEmitter();
-  @Output() onActiveChange = new EventEmitter<number>();
+  @Output() opened = new EventEmitter();
+  @Output() closed = new EventEmitter();
+  @Output() activeChange = new EventEmitter<number>();
 
   @ViewChild('previewImage', { static: false }) previewImage: ElementRef;
 
@@ -225,7 +225,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   }
 
   open(index: number): void {
-    this.onOpen.emit();
+    this.opened.emit();
 
     this.index = index;
     this.isOpen = true;
@@ -239,7 +239,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
   close(): void {
     this.isOpen = false;
     this.closeFullscreen();
-    this.onClose.emit();
+    this.closed.emit();
 
     this.stopAutoPlay();
   }
@@ -488,7 +488,7 @@ export class NgxGalleryPreviewComponent implements OnInit, OnDestroy, OnChanges 
     this.loading = true;
     this.stopAutoPlay();
 
-    this.onActiveChange.emit(this.index);
+    this.activeChange.emit(this.index);
 
     if (first || !this.animation) {
       this._show();

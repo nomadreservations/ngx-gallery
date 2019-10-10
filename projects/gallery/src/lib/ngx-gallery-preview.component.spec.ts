@@ -125,7 +125,7 @@ describe('NgxGalleryPreviewComponent', () => {
   });
 
   it('should trigger event onOpen', done => {
-    comp.onOpen.subscribe(() => {
+    comp.opened.subscribe(() => {
       done();
     });
 
@@ -134,7 +134,7 @@ describe('NgxGalleryPreviewComponent', () => {
   });
 
   it('should trigger event onClose', done => {
-    comp.onClose.subscribe(() => {
+    comp.closed.subscribe(() => {
       done();
     });
 
@@ -226,23 +226,23 @@ describe('NgxGalleryPreviewComponent', () => {
   });
 
   it('should trigger change event on show next', () => {
-    spyOn(comp.onActiveChange, 'emit');
+    spyOn(comp.activeChange, 'emit');
 
     comp.showNext();
-    expect(comp.onActiveChange.emit).toHaveBeenCalled();
+    expect(comp.activeChange.emit).toHaveBeenCalled();
   });
 
   it('should trigger change event on show previous', () => {
-    spyOn(comp.onActiveChange, 'emit');
+    spyOn(comp.activeChange, 'emit');
     comp.open(1);
     comp.loading = false;
 
     comp.showPrev();
-    expect(comp.onActiveChange.emit).toHaveBeenCalled();
+    expect(comp.activeChange.emit).toHaveBeenCalled();
   });
 
   it('should emit change events during autoplay', done => {
-    spyOn(comp.onActiveChange, 'emit');
+    spyOn(comp.activeChange, 'emit');
 
     comp.autoPlay = true;
     comp.autoPlayInterval = 1;
@@ -255,7 +255,7 @@ describe('NgxGalleryPreviewComponent', () => {
 
     setTimeout(() => {
       fixture.detectChanges();
-      expect(comp.onActiveChange.emit).toHaveBeenCalledTimes(2);
+      expect(comp.activeChange.emit).toHaveBeenCalledTimes(2);
       done();
     }, 1000);
   });

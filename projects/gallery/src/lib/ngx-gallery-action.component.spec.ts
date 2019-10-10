@@ -25,17 +25,17 @@ describe('NgxGalleryActionComponent', () => {
     iconContent = el.querySelector('.ngx-gallery-icon-content');
   });
 
-  it('should emit event onClick after click', () => {
-    spyOn(comp.onClick, 'emit');
+  it('should emit event clicked after click', () => {
+    spyOn(comp.clicked, 'emit');
     icon.click();
-    expect(comp.onClick.emit).toHaveBeenCalled();
+    expect(comp.clicked.emit).toHaveBeenCalled();
   });
 
-  it('should not emit event onClick after click if action is disabled', () => {
+  it('should not emit event clicked after click if action is disabled', () => {
     comp.disabled = true;
-    spyOn(comp.onClick, 'emit');
+    spyOn(comp.clicked, 'emit');
     icon.click();
-    expect(comp.onClick.emit).not.toHaveBeenCalled();
+    expect(comp.clicked.emit).not.toHaveBeenCalled();
   });
 
   it('should set icon class', () => {

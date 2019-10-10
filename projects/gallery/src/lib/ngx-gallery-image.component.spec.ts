@@ -107,7 +107,7 @@ describe('NgxGalleryImageComponent', () => {
   });
 
   it('should emit event onClick after click on image', done => {
-    comp.onClick.subscribe(index => {
+    comp.clicked.subscribe(index => {
       expect(index).toEqual(1);
       done();
     });
