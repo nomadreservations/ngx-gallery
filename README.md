@@ -10,7 +10,7 @@
 This is an angular 8+ and ivy friendly fork of [https://github.com/lukasz-galka/ngx-gallery](https://github.com/lukasz-galka/ngx-gallery) and [https://github.com/lukasz-galka/ngx-gallery-demo](https://github.com/lukasz-galka/ngx-gallery-demo).
 
 
-_This utilizes ng-packagr greater than 5.5.1 to ensure an ivy compatible package._
+_This utilizes ng-packagr greater than 5.5.1 to ensure an ivy (@angular 9+ ivy) compatible package._
 
 
 # Demo

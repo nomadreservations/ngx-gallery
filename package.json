@@ -1,5 +1,6 @@
 {
-  "name": "ngx-gallery",
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "@nomadreservations/ngx-gallery", 
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
@@ -16,8 +17,12 @@
     "semantic-release": "semantic-release"
   },
   "license": "MIT",
-  "private": true,
-  "dependencies": {
+  "peerDependencies": {
+    "@angular/common": "^8.2.9",
+    "@angular/core": "^8.2.9"
+  },
+  "dependencies": {},
+  "devDependencies": {
     "@angular/animations": "~8.2.10",
     "@angular/common": "~8.2.10",
     "@angular/compiler": "~8.2.10",
@@ -28,9 +33,7 @@
     "@angular/router": "~8.2.10",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
-  },
-  "devDependencies": {
+    "zone.js": "~0.10.2",
     "@angular-devkit/build-angular": "~0.803.8",
     "@angular-devkit/build-ng-packagr": "~0.803.8",
     "@angular/cli": "~8.3.8",
@@ -81,6 +84,12 @@
     "hooks": {
       "pre-commit": "npm run lint",
       "commit-msg": "commitlint --edit"
+    }
+  },
+  "ngPackage": {
+    "dest": "./dist/ngx-gallery",
+    "lib": {
+      "entryFile": "./projects/gallery/src/index.ts"
     }
   }
 }

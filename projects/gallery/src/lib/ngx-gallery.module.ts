@@ -1,9 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import {
-  HammerGestureConfig,
-  HAMMER_GESTURE_CONFIG
-} from '@angular/platform-browser';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgxGalleryActionComponent } from './ngx-gallery-action.component';
 import { NgxGalleryArrowsComponent } from './ngx-gallery-arrows.component';
 import { NgxGalleryBulletsComponent } from './ngx-gallery-bullets.component';
