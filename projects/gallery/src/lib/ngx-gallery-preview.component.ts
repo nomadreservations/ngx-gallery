@@ -21,8 +21,8 @@ import { NgxGalleryHelperService } from './ngx-gallery-helper.service';
   template: `
     <ngx-gallery-arrows
       *ngIf="arrows"
-      (onPrevClick)="showPrev()"
-      (onNextClick)="showNext()"
+      (prevClick)="showPrev()"
+      (nextClick)="showNext()"
       [prevDisabled]="!canShowPrev()"
       [nextDisabled]="!canShowNext()"
       [arrowPrevIcon]="arrowPrevIcon"
@@ -35,7 +35,7 @@ import { NgxGalleryHelperService } from './ngx-gallery-helper.service';
           [icon]="action.icon"
           [disabled]="action.disabled"
           [titleText]="action.titleText"
-          (onClick)="action.onClick($event, index)"
+          (clicked)="action.onClick($event, index)"
         ></ngx-gallery-action>
         <a *ngIf="download && src" [href]="src" class="ngx-gallery-icon" aria-hidden="true" download>
           <i class="ngx-gallery-icon-content {{ downloadIcon }}"></i>
@@ -44,22 +44,22 @@ import { NgxGalleryHelperService } from './ngx-gallery-helper.service';
           *ngIf="zoom"
           [icon]="zoomOutIcon"
           [disabled]="!canZoomOut()"
-          (onClick)="zoomOut()"
+          (clicked)="zoomOut()"
         ></ngx-gallery-action>
         <ngx-gallery-action
           *ngIf="zoom"
           [icon]="zoomInIcon"
           [disabled]="!canZoomIn()"
-          (onClick)="zoomIn()"
+          (clicked)="zoomIn()"
         ></ngx-gallery-action>
-        <ngx-gallery-action *ngIf="rotate" [icon]="rotateLeftIcon" (onClick)="rotateLeft()"></ngx-gallery-action>
-        <ngx-gallery-action *ngIf="rotate" [icon]="rotateRightIcon" (onClick)="rotateRight()"></ngx-gallery-action>
+        <ngx-gallery-action *ngIf="rotate" [icon]="rotateLeftIcon" (clicked)="rotateLeft()"></ngx-gallery-action>
+        <ngx-gallery-action *ngIf="rotate" [icon]="rotateRightIcon" (clicked)="rotateRight()"></ngx-gallery-action>
         <ngx-gallery-action
           *ngIf="fullscreen"
           [icon]="'ngx-gallery-fullscreen ' + fullscreenIcon"
-          (onClick)="manageFullscreen()"
+          (clicked)="manageFullscreen()"
         ></ngx-gallery-action>
-        <ngx-gallery-action [icon]="'ngx-gallery-close ' + closeIcon" (onClick)="close()"></ngx-gallery-action>
+        <ngx-gallery-action [icon]="'ngx-gallery-close ' + closeIcon" (clicked)="close()"></ngx-gallery-action>
       </div>
     </div>
     <div class="ngx-spinner-wrapper ngx-gallery-center" [class.ngx-gallery-active]="showSpinner">
@@ -95,7 +95,7 @@ import { NgxGalleryHelperService } from './ngx-gallery-helper.service';
           *ngIf="bullets"
           [count]="images.length"
           [active]="index"
-          (onChange)="showAtIndex($event)"
+          (changed)="showAtIndex($event)"
         ></ngx-gallery-bullets>
       </div>
       <div

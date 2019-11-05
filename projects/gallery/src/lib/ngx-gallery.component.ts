@@ -47,8 +47,8 @@ import { NgxGalleryThumbnailsComponent } from './ngx-gallery-thumbnails.componen
         [descriptions]="descriptions"
         [showDescription]="currentOptions?.imageDescription"
         [bullets]="currentOptions?.imageBullets"
-        (onClick)="openPreview($event)"
-        (onActiveChange)="selectFromImage($event)"
+        (clicked)="openPreview($event)"
+        (activeChange)="selectFromImage($event)"
       ></ngx-gallery-image>
 
       <ngx-gallery-thumbnails
@@ -76,7 +76,7 @@ import { NgxGalleryThumbnailsComponent } from './ngx-gallery-thumbnails.componen
         [remainingCount]="currentOptions?.thumbnailsRemainingCount"
         [lazyLoading]="currentOptions?.lazyLoading"
         [actions]="currentOptions?.thumbnailActions"
-        (onActiveChange)="selectFromThumbnails($event)"
+        (activeChange)="selectFromThumbnails($event)"
       ></ngx-gallery-thumbnails>
 
       <ngx-gallery-preview
@@ -114,9 +114,9 @@ import { NgxGalleryThumbnailsComponent } from './ngx-gallery-thumbnails.componen
         [download]="currentOptions?.previewDownload"
         [downloadIcon]="currentOptions?.downloadIcon"
         [bullets]="currentOptions?.previewBullets"
-        (onClose)="onPreviewClose()"
-        (onOpen)="onPreviewOpen()"
-        (onActiveChange)="previewSelect($event)"
+        (closed)="onPreviewClose()"
+        (opened)="onPreviewOpen()"
+        (activeChange)="previewSelect($event)"
         [class.ngx-gallery-active]="previewEnabled"
       ></ngx-gallery-preview>
     </div>

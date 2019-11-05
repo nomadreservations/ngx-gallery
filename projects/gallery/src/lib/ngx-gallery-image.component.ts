@@ -37,7 +37,7 @@ import { NgxGalleryOrderedImage } from './ngx-gallery-ordered-image.model';
             [icon]="action.icon"
             [disabled]="action.disabled"
             [titleText]="action.titleText"
-            (onClick)="action.onClick($event, image.index)"
+            (clicked)="action.onClick($event, image.index)"
           ></ngx-gallery-action>
         </div>
         <div
@@ -52,13 +52,13 @@ import { NgxGalleryOrderedImage } from './ngx-gallery-ordered-image.model';
       *ngIf="bullets"
       [count]="images.length"
       [active]="selectedIndex"
-      (onChange)="show($event)"
+      (changed)="show($event)"
     ></ngx-gallery-bullets>
     <ngx-gallery-arrows
       class="ngx-gallery-image-size-{{ size }}"
       *ngIf="arrows"
-      (onPrevClick)="showPrev()"
-      (onNextClick)="showNext()"
+      (prevClick)="showPrev()"
+      (nextClick)="showNext()"
       [prevDisabled]="!canShowPrev()"
       [nextDisabled]="!canShowNext()"
       [arrowPrevIcon]="arrowPrevIcon"

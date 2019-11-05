@@ -42,7 +42,7 @@ import { NgxGalleryOrder } from './ngx-gallery-order.model';
               [icon]="action.icon"
               [disabled]="action.disabled"
               [titleText]="action.titleText"
-              (onClick)="action.onClick($event, i)"
+              (clicked)="action.onClick($event, i)"
             ></ngx-gallery-action>
           </div>
           <div
@@ -56,8 +56,8 @@ import { NgxGalleryOrder } from './ngx-gallery-order.model';
     </div>
     <ngx-gallery-arrows
       *ngIf="canShowArrows()"
-      (onPrevClick)="moveLeft()"
-      (onNextClick)="moveRight()"
+      (prevClick)="moveLeft()"
+      (nextClick)="moveRight()"
       [prevDisabled]="!canMoveLeft()"
       [nextDisabled]="!canMoveRight()"
       [arrowPrevIcon]="arrowPrevIcon"
